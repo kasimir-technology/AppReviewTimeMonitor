@@ -18,6 +18,7 @@
 		5A3CF6E51BDE6903005BE7AC /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5A3CF6DB1BDE6646005BE7AC /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		5A3CF6EB1BDE76A0005BE7AC /* RegExp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A3CF6EA1BDE76A0005BE7AC /* RegExp.swift */; };
 		5A3CF6EC1BDE76A0005BE7AC /* RegExp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A3CF6EA1BDE76A0005BE7AC /* RegExp.swift */; };
+		5A8A3D981BDE848F00C6A6FD /* AppReviewTimeMonitor.app in CopyFiles */ = {isa = PBXBuildFile; fileRef = 5A3CF6AB1BDE5962005BE7AC /* AppReviewTimeMonitor.app */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +49,16 @@
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5A8A3D971BDE847E00C6A6FD /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 8;
+			dstPath = /Applications;
+			dstSubfolderSpec = 0;
+			files = (
+				5A8A3D981BDE848F00C6A6FD /* AppReviewTimeMonitor.app in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 1;
 		};
 /* End PBXCopyFilesBuildPhase section */
 
@@ -162,6 +173,7 @@
 				5A3CF6A81BDE5962005BE7AC /* Frameworks */,
 				5A3CF6A91BDE5962005BE7AC /* Resources */,
 				5A3CF6E61BDE6903005BE7AC /* Embed Frameworks */,
+				5A8A3D971BDE847E00C6A6FD /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -532,6 +544,7 @@
 				5A3CF6D01BDE5962005BE7AC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		5A3CF6D11BDE5962005BE7AC /* Build configuration list for PBXNativeTarget "AppReviewTimeMonitorTests" */ = {
 			isa = XCConfigurationList;
@@ -540,6 +553,7 @@
 				5A3CF6D31BDE5962005BE7AC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		5A3CF6D41BDE5962005BE7AC /* Build configuration list for PBXNativeTarget "AppReviewTimeMonitorUITests" */ = {
 			isa = XCConfigurationList;
@@ -548,6 +562,7 @@
 				5A3CF6D61BDE5962005BE7AC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
