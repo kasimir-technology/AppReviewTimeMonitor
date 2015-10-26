@@ -100,11 +100,11 @@
 		5A3CF6A21BDE5962005BE7AC = {
 			isa = PBXGroup;
 			children = (
-				5A3CF6DB1BDE6646005BE7AC /* Alamofire.framework */,
 				5A3CF6AD1BDE5962005BE7AC /* AppReviewTimeMonitor */,
 				5A3CF6BD1BDE5962005BE7AC /* AppReviewTimeMonitorTests */,
 				5A3CF6C81BDE5962005BE7AC /* AppReviewTimeMonitorUITests */,
 				5A3CF6AC1BDE5962005BE7AC /* Products */,
+				5A3CF6DB1BDE6646005BE7AC /* Alamofire.framework */,
 			);
 			sourceTree = "<group>";
 		};

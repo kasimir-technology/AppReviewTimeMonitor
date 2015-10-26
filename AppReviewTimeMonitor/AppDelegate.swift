@@ -33,13 +33,13 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         // Insert code here to initialize your application
         showErrorIcon()
         refreshTimes()
+        statusItem.menu = menu
 
         // start timer to update values every 30 min
         NSTimer.scheduledTimerWithTimeInterval(60*30, target:self, selector: Selector("refreshTimes"), userInfo: nil, repeats: true)
     }
 
     func refreshTimes() {
-        print("refreshing")
         Alamofire.request(.GET, "http://appreviewtimes.com/").responseData { response in
 
             if response.result.isSuccess {
