@@ -13,6 +13,11 @@
 		5A3CF6BF1BDE5962005BE7AC /* AppReviewTimeMonitorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A3CF6BE1BDE5962005BE7AC /* AppReviewTimeMonitorTests.swift */; };
 		5A3CF6CA1BDE5962005BE7AC /* AppReviewTimeMonitorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A3CF6C91BDE5962005BE7AC /* AppReviewTimeMonitorUITests.swift */; };
 		5A3CF6DA1BDE5FA1005BE7AC /* AppReviewTimeMonitorStyleKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A3CF6D91BDE5FA1005BE7AC /* AppReviewTimeMonitorStyleKit.swift */; };
+		5A3CF6E21BDE68D2005BE7AC /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A3CF6E11BDE68D2005BE7AC /* Alamofire.framework */; };
+		5A3CF6E31BDE68D2005BE7AC /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A3CF6E11BDE68D2005BE7AC /* Alamofire.framework */; };
+		5A3CF6E51BDE6903005BE7AC /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5A3CF6DB1BDE6646005BE7AC /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		5A3CF6EB1BDE76A0005BE7AC /* RegExp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A3CF6EA1BDE76A0005BE7AC /* RegExp.swift */; };
+		5A3CF6EC1BDE76A0005BE7AC /* RegExp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A3CF6EA1BDE76A0005BE7AC /* RegExp.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,6 +37,20 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		5A3CF6E61BDE6903005BE7AC /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				5A3CF6E51BDE6903005BE7AC /* Alamofire.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		5A3CF6AB1BDE5962005BE7AC /* AppReviewTimeMonitor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppReviewTimeMonitor.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A3CF6AE1BDE5962005BE7AC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -45,6 +64,10 @@
 		5A3CF6C91BDE5962005BE7AC /* AppReviewTimeMonitorUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppReviewTimeMonitorUITests.swift; sourceTree = "<group>"; };
 		5A3CF6CB1BDE5962005BE7AC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5A3CF6D91BDE5FA1005BE7AC /* AppReviewTimeMonitorStyleKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppReviewTimeMonitorStyleKit.swift; sourceTree = "<group>"; };
+		5A3CF6DB1BDE6646005BE7AC /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/Mac/Alamofire.framework; sourceTree = "<group>"; };
+		5A3CF6E11BDE68D2005BE7AC /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Alamofire.framework; sourceTree = "<group>"; };
+		5A3CF6EA1BDE76A0005BE7AC /* RegExp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegExp.swift; sourceTree = "<group>"; };
+		5A3CF6ED1BDE76A7005BE7AC /* SwiftRegExp-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SwiftRegExp-Bridging-Header.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +75,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5A3CF6E21BDE68D2005BE7AC /* Alamofire.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -66,6 +90,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5A3CF6E31BDE68D2005BE7AC /* Alamofire.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -75,6 +100,7 @@
 		5A3CF6A21BDE5962005BE7AC = {
 			isa = PBXGroup;
 			children = (
+				5A3CF6DB1BDE6646005BE7AC /* Alamofire.framework */,
 				5A3CF6AD1BDE5962005BE7AC /* AppReviewTimeMonitor */,
 				5A3CF6BD1BDE5962005BE7AC /* AppReviewTimeMonitorTests */,
 				5A3CF6C81BDE5962005BE7AC /* AppReviewTimeMonitorUITests */,
@@ -99,7 +125,10 @@
 				5A3CF6D91BDE5FA1005BE7AC /* AppReviewTimeMonitorStyleKit.swift */,
 				5A3CF6B01BDE5962005BE7AC /* Assets.xcassets */,
 				5A3CF6B21BDE5962005BE7AC /* MainMenu.xib */,
+				5A3CF6EA1BDE76A0005BE7AC /* RegExp.swift */,
+				5A3CF6ED1BDE76A7005BE7AC /* SwiftRegExp-Bridging-Header.h */,
 				5A3CF6B51BDE5962005BE7AC /* Info.plist */,
+				5A3CF6E11BDE68D2005BE7AC /* Alamofire.framework */,
 			);
 			path = AppReviewTimeMonitor;
 			sourceTree = "<group>";
@@ -132,6 +161,7 @@
 				5A3CF6A71BDE5962005BE7AC /* Sources */,
 				5A3CF6A81BDE5962005BE7AC /* Frameworks */,
 				5A3CF6A91BDE5962005BE7AC /* Resources */,
+				5A3CF6E61BDE6903005BE7AC /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -255,6 +285,7 @@
 			files = (
 				5A3CF6DA1BDE5FA1005BE7AC /* AppReviewTimeMonitorStyleKit.swift in Sources */,
 				5A3CF6AF1BDE5962005BE7AC /* AppDelegate.swift in Sources */,
+				5A3CF6EB1BDE76A0005BE7AC /* RegExp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -270,6 +301,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5A3CF6EC1BDE76A0005BE7AC /* RegExp.swift in Sources */,
 				5A3CF6CA1BDE5962005BE7AC /* AppReviewTimeMonitorUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -388,6 +420,11 @@
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
+					"$(PROJECT_DIR)/AppReviewTimeMonitor",
+				);
 				INFOPLIST_FILE = AppReviewTimeMonitor/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = technology.kasimir.AppReviewTimeMonitor;
@@ -403,6 +440,11 @@
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
+					"$(PROJECT_DIR)/AppReviewTimeMonitor",
+				);
 				INFOPLIST_FILE = AppReviewTimeMonitor/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = technology.kasimir.AppReviewTimeMonitor;
@@ -441,6 +483,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/AppReviewTimeMonitor",
+				);
 				INFOPLIST_FILE = AppReviewTimeMonitorUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = technology.kasimir.AppReviewTimeMonitorUITests;
@@ -454,6 +500,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/AppReviewTimeMonitor",
+				);
 				INFOPLIST_FILE = AppReviewTimeMonitorUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = technology.kasimir.AppReviewTimeMonitorUITests;
