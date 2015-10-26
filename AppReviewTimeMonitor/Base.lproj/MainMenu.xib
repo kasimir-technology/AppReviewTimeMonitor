@@ -20,13 +20,16 @@
         <customObject id="YLy-65-1bz" customClass="NSFontManager"/>
         <menu id="cfE-bG-E3L">
             <items>
+                <menuItem title="left: iOS, right: OSX" id="VPa-HX-17v">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                </menuItem>
                 <menuItem title="Refresh now" image="NSRefreshTemplate" id="hQK-OB-afS">
                     <modifierMask key="keyEquivalentModifierMask"/>
                     <connections>
                         <action selector="refreshAction:" target="Voe-Tx-rLC" id="hW5-aI-8mX"/>
                     </connections>
                 </menuItem>
-                <menuItem title="appreviewtimes.com" image="NSActionTemplate" id="Hsc-Gm-pMZ">
+                <menuItem title="goto appreviewtimes.com" image="NSActionTemplate" id="Hsc-Gm-pMZ">
                     <modifierMask key="keyEquivalentModifierMask"/>
                     <connections>
                         <action selector="gotoWebsiteAction:" target="Voe-Tx-rLC" id="ate-VA-IJd"/>

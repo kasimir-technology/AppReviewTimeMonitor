@@ -47,29 +47,32 @@ class AppDelegate: NSObject, NSApplicationDelegate {
                 let pattern = "<p class=\"average\">(.*?) days<\\/p>"
                 let days = self.extractData(result,regexp: pattern)
 
-                let label:String
+                let iosLabel:String
+                let osxLabel:String
 
                 if days.iosStore != -1 {
-                    label = "\(days.iosStore)"
+                    iosLabel = "\(days.iosStore)"
+                    osxLabel = "\(days.osxStore)"
                 } else {
-                    label = "??"
+                    iosLabel = "??"
+                    osxLabel = "??"
                 }
 
-                self.updateIcon("\(label)")
+                self.updateIcons(iosLabel:"\(iosLabel)", osxLabel:"\(osxLabel)")
             } else {
                 self.showErrorIcon()
             }
         }
     }
 
-    func updateIcon(label:String) {
-        let icon = AppReviewTimeMonitorStyleKit.imageOfStatusBarImage(dayLabel: label)
+    func updateIcons(iosLabel iosLabel:String, osxLabel:String) {
+        let icon = AppReviewTimeMonitorStyleKit.imageOfCombinedStatusBarImage(iosDayLabel: iosLabel, osxDayLabel: osxLabel)
         icon.template = true
         statusItem.image = icon
     }
 
     func showErrorIcon() {
-        let icon = AppReviewTimeMonitorStyleKit.imageOfStatusBarError
+        let icon = AppReviewTimeMonitorStyleKit.imageOfCombinedStatusBarError
         icon.template = true
         statusItem.image = icon
     }
