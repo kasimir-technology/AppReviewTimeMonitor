@@ -31,14 +31,15 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
     func applicationDidFinishLaunching(aNotification: NSNotification) {
         // Insert code here to initialize your application
-        let icon = AppReviewTimeMonitorStyleKit.imageOfStatusBarImage(dayLabel: "??")
-        icon.template = true
-        statusItem.image = icon
-        statusItem.menu = menu
+        showErrorIcon()
         refreshTimes()
+
+        // start timer to update values every 30 min
+        NSTimer.scheduledTimerWithTimeInterval(60*30, target:self, selector: Selector("refreshTimes"), userInfo: nil, repeats: true)
     }
 
     func refreshTimes() {
+        print("refreshing")
         Alamofire.request(.GET, "http://appreviewtimes.com/").responseData { response in
 
             if response.result.isSuccess {
@@ -54,16 +55,25 @@ class AppDelegate: NSObject, NSApplicationDelegate {
                     label = "??"
                 }
 
-                let icon = AppReviewTimeMonitorStyleKit.imageOfStatusBarImage(dayLabel: "\(label)")
-                icon.template = true
-                self.statusItem.image = icon
+                self.updateIcon("\(label)")
             } else {
-                let icon = AppReviewTimeMonitorStyleKit.imageOfStatusBarImage(dayLabel: "ER")
-                icon.template = true
-                self.statusItem.image = icon
+                self.showErrorIcon()
             }
         }
     }
+
+    func updateIcon(label:String) {
+        let icon = AppReviewTimeMonitorStyleKit.imageOfStatusBarImage(dayLabel: label)
+        icon.template = true
+        statusItem.image = icon
+    }
+
+    func showErrorIcon() {
+        let icon = AppReviewTimeMonitorStyleKit.imageOfStatusBarError
+        icon.template = true
+        statusItem.image = icon
+    }
+
 
     func extractData(str:String, regexp:String) -> (iosStore:Int, osxStore:Int){
         var ret:[Int] = []

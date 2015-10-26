@@ -20,7 +20,7 @@
         <customObject id="YLy-65-1bz" customClass="NSFontManager"/>
         <menu id="cfE-bG-E3L">
             <items>
-                <menuItem title="Refresh" image="NSRefreshTemplate" id="hQK-OB-afS">
+                <menuItem title="Refresh now" image="NSRefreshTemplate" id="hQK-OB-afS">
                     <modifierMask key="keyEquivalentModifierMask"/>
                     <connections>
                         <action selector="refreshAction:" target="Voe-Tx-rLC" id="hW5-aI-8mX"/>

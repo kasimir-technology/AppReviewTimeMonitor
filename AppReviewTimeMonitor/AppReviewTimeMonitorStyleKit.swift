@@ -14,6 +14,12 @@ import Cocoa
 
 public class AppReviewTimeMonitorStyleKit : NSObject {
 
+    //// Cache
+
+    private struct Cache {
+        static var imageOfStatusBarError: NSImage?
+    }
+
     //// Drawing Methods
 
     public class func drawStatusBarImage(dayLabel dayLabel: String = "99") {
@@ -42,6 +48,41 @@ public class AppReviewTimeMonitorStyleKit : NSObject {
         NSGraphicsContext.restoreGraphicsState()
     }
 
+    public class func drawStatusBarError() {
+
+        //// Rectangle Drawing
+        let rectanglePath = NSBezierPath(roundedRect: NSMakeRect(1, 5.5, 20, 13), xRadius: 3, yRadius: 3)
+        NSColor.blackColor().setStroke()
+        rectanglePath.lineWidth = 1
+        rectanglePath.stroke()
+
+
+        //// Bezier Drawing
+        let bezierPath = NSBezierPath()
+        bezierPath.moveToPoint(NSMakePoint(11.5, 14))
+        bezierPath.lineToPoint(NSMakePoint(10.5, 14))
+        bezierPath.curveToPoint(NSMakePoint(10.5, 12.87), controlPoint1: NSMakePoint(10.5, 14), controlPoint2: NSMakePoint(10.5, 13.48))
+        bezierPath.curveToPoint(NSMakePoint(10.5, 11), controlPoint1: NSMakePoint(10.5, 12.02), controlPoint2: NSMakePoint(10.5, 11))
+        bezierPath.lineToPoint(NSMakePoint(11.5, 11))
+        bezierPath.lineToPoint(NSMakePoint(11.5, 14))
+        bezierPath.closePath()
+        bezierPath.moveToPoint(NSMakePoint(11.5, 10))
+        bezierPath.lineToPoint(NSMakePoint(10.5, 10))
+        bezierPath.curveToPoint(NSMakePoint(10.5, 9.22), controlPoint1: NSMakePoint(10.5, 10), controlPoint2: NSMakePoint(10.5, 9.51))
+        bezierPath.curveToPoint(NSMakePoint(10.5, 9), controlPoint1: NSMakePoint(10.5, 9.09), controlPoint2: NSMakePoint(10.5, 9))
+        bezierPath.lineToPoint(NSMakePoint(11.5, 9))
+        bezierPath.lineToPoint(NSMakePoint(11.5, 10))
+        bezierPath.closePath()
+        bezierPath.moveToPoint(NSMakePoint(11, 16.75))
+        bezierPath.lineToPoint(NSMakePoint(15.98, 8.13))
+        bezierPath.lineToPoint(NSMakePoint(6.02, 8.13))
+        bezierPath.curveToPoint(NSMakePoint(6.69, 9.28), controlPoint1: NSMakePoint(6.02, 8.13), controlPoint2: NSMakePoint(6.28, 8.58))
+        bezierPath.curveToPoint(NSMakePoint(11, 16.75), controlPoint1: NSMakePoint(8.04, 11.63), controlPoint2: NSMakePoint(11, 16.75))
+        bezierPath.closePath()
+        NSColor.blackColor().setFill()
+        bezierPath.fill()
+    }
+
     //// Generated Images
 
     public class func imageOfStatusBarImage(dayLabel dayLabel: String = "99") -> NSImage {
@@ -50,6 +91,20 @@ public class AppReviewTimeMonitorStyleKit : NSObject {
 
             return true
         }
+    }
+
+    public class var imageOfStatusBarError: NSImage {
+        if Cache.imageOfStatusBarError != nil {
+            return Cache.imageOfStatusBarError!
+        }
+
+        Cache.imageOfStatusBarError = NSImage(size: NSMakeSize(22, 22), flipped: false) { (NSRect) -> Bool in 
+                AppReviewTimeMonitorStyleKit.drawStatusBarError()
+
+            return true
+        }
+
+        return Cache.imageOfStatusBarError!
     }
 
 }
