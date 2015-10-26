@@ -12,6 +12,7 @@
 		5A3CF6B41BDE5962005BE7AC /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5A3CF6B21BDE5962005BE7AC /* MainMenu.xib */; };
 		5A3CF6BF1BDE5962005BE7AC /* AppReviewTimeMonitorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A3CF6BE1BDE5962005BE7AC /* AppReviewTimeMonitorTests.swift */; };
 		5A3CF6CA1BDE5962005BE7AC /* AppReviewTimeMonitorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A3CF6C91BDE5962005BE7AC /* AppReviewTimeMonitorUITests.swift */; };
+		5A3CF6DA1BDE5FA1005BE7AC /* AppReviewTimeMonitorStyleKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A3CF6D91BDE5FA1005BE7AC /* AppReviewTimeMonitorStyleKit.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +44,7 @@
 		5A3CF6C51BDE5962005BE7AC /* AppReviewTimeMonitorUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AppReviewTimeMonitorUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A3CF6C91BDE5962005BE7AC /* AppReviewTimeMonitorUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppReviewTimeMonitorUITests.swift; sourceTree = "<group>"; };
 		5A3CF6CB1BDE5962005BE7AC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5A3CF6D91BDE5FA1005BE7AC /* AppReviewTimeMonitorStyleKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppReviewTimeMonitorStyleKit.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +96,7 @@
 			isa = PBXGroup;
 			children = (
 				5A3CF6AE1BDE5962005BE7AC /* AppDelegate.swift */,
+				5A3CF6D91BDE5FA1005BE7AC /* AppReviewTimeMonitorStyleKit.swift */,
 				5A3CF6B01BDE5962005BE7AC /* Assets.xcassets */,
 				5A3CF6B21BDE5962005BE7AC /* MainMenu.xib */,
 				5A3CF6B51BDE5962005BE7AC /* Info.plist */,
@@ -187,6 +190,7 @@
 				TargetAttributes = {
 					5A3CF6AA1BDE5962005BE7AC = {
 						CreatedOnToolsVersion = 7.1;
+						DevelopmentTeam = 3QUDU64BT8;
 					};
 					5A3CF6B91BDE5962005BE7AC = {
 						CreatedOnToolsVersion = 7.1;
@@ -249,6 +253,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5A3CF6DA1BDE5FA1005BE7AC /* AppReviewTimeMonitorStyleKit.swift in Sources */,
 				5A3CF6AF1BDE5962005BE7AC /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -380,11 +385,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = AppReviewTimeMonitor/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = technology.kasimir.AppReviewTimeMonitor;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -392,11 +400,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = AppReviewTimeMonitor/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = technology.kasimir.AppReviewTimeMonitor;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};

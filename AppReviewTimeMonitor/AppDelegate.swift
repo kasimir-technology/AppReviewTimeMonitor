@@ -11,17 +11,37 @@ import Cocoa
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
 
-    @IBOutlet weak var window: NSWindow!
+    var counter = 0
+
+    @IBOutlet weak var menu: NSMenu!
+
+    @IBAction func refreshAction(sender: AnyObject) {
+        refreshTimes()
+    }
+
+    @IBAction func quitAction(sender: AnyObject) {
+    }
+
+    @IBAction func gotoWebsiteAction(sender: AnyObject) {
+    }
+    
+    let statusItem = NSStatusBar.systemStatusBar().statusItemWithLength(NSVariableStatusItemLength)
 
 
     func applicationDidFinishLaunching(aNotification: NSNotification) {
         // Insert code here to initialize your application
+        let icon = AppReviewTimeMonitorStyleKit.imageOfStatusBarImage(dayLabel: "??")
+        icon.template = true
+        statusItem.image = icon
+        statusItem.menu = menu
     }
 
-    func applicationWillTerminate(aNotification: NSNotification) {
-        // Insert code here to tear down your application
+    func refreshTimes() {
+        counter++
+        let icon = AppReviewTimeMonitorStyleKit.imageOfStatusBarImage(dayLabel: "\(counter)")
+        icon.template = true
+        statusItem.image = icon
     }
-
 
 }
 
