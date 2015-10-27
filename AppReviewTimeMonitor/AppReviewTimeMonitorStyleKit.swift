@@ -19,13 +19,14 @@ public class AppReviewTimeMonitorStyleKit : NSObject {
     private struct Cache {
         static var imageOfStatusBarError: NSImage?
         static var imageOfCombinedStatusBarError: NSImage?
+        static var imageOfOpenLink: NSImage?
     }
 
     //// Drawing Methods
 
     public class func drawStatusBarImage(iosDayLabel iosDayLabel: String = "99") {
         //// General Declarations
-        //let context = unsafeBitCast(NSGraphicsContext.currentContext()!.graphicsPort, CGContext.self)
+        let context = unsafeBitCast(NSGraphicsContext.currentContext()!.graphicsPort, CGContext.self)
 
         //// Rectangle Drawing
         let rectanglePath = NSBezierPath(roundedRect: NSMakeRect(1, 5, 20, 13), xRadius: 3, yRadius: 3)
@@ -86,7 +87,7 @@ public class AppReviewTimeMonitorStyleKit : NSObject {
 
     public class func drawCombinedStatusBarImage(iosDayLabel iosDayLabel: String = "99", osxDayLabel: String = "99") {
         //// General Declarations
-        //let context = unsafeBitCast(NSGraphicsContext.currentContext()!.graphicsPort, CGContext.self)
+        let context = unsafeBitCast(NSGraphicsContext.currentContext()!.graphicsPort, CGContext.self)
 
         //// Rectangle Drawing
         let rectanglePath = NSBezierPath(roundedRect: NSMakeRect(1, 4.5, 39.5, 13), xRadius: 3, yRadius: 3)
@@ -204,6 +205,58 @@ public class AppReviewTimeMonitorStyleKit : NSObject {
         bezier3Path.fill()
     }
 
+    public class func drawOpenLink() {
+
+        //// Group
+        //// Group 2
+        //// Bezier 2 Drawing
+        let bezier2Path = NSBezierPath()
+        bezier2Path.moveToPoint(NSMakePoint(14.5, 14.5))
+        bezier2Path.lineToPoint(NSMakePoint(8.5, 8.5))
+        NSColor.blackColor().setStroke()
+        bezier2Path.lineWidth = 1
+        bezier2Path.stroke()
+
+
+        //// Bezier Drawing
+        let bezierPath = NSBezierPath()
+        bezierPath.moveToPoint(NSMakePoint(10, 14.5))
+        bezierPath.lineToPoint(NSMakePoint(14.5, 14.5))
+        bezierPath.lineToPoint(NSMakePoint(14.5, 10))
+        NSColor.blackColor().setStroke()
+        bezierPath.lineWidth = 1
+        bezierPath.stroke()
+
+
+
+
+
+
+        //// Bezier 3 Drawing
+        let bezier3Path = NSBezierPath()
+        bezier3Path.moveToPoint(NSMakePoint(9.38, 12.5))
+        bezier3Path.curveToPoint(NSMakePoint(8.38, 11.5), controlPoint1: NSMakePoint(9.01, 12.13), controlPoint2: NSMakePoint(8.64, 11.76))
+        bezier3Path.lineToPoint(NSMakePoint(4, 11.5))
+        bezier3Path.curveToPoint(NSMakePoint(2.5, 10), controlPoint1: NSMakePoint(3.17, 11.5), controlPoint2: NSMakePoint(2.5, 10.83))
+        bezier3Path.lineToPoint(NSMakePoint(2.5, 5))
+        bezier3Path.curveToPoint(NSMakePoint(4, 3.5), controlPoint1: NSMakePoint(2.5, 4.17), controlPoint2: NSMakePoint(3.17, 3.5))
+        bezier3Path.lineToPoint(NSMakePoint(10, 3.5))
+        bezier3Path.curveToPoint(NSMakePoint(11.5, 5), controlPoint1: NSMakePoint(10.83, 3.5), controlPoint2: NSMakePoint(11.5, 4.17))
+        bezier3Path.curveToPoint(NSMakePoint(11.5, 8.5), controlPoint1: NSMakePoint(11.5, 5), controlPoint2: NSMakePoint(11.5, 7.03))
+        bezier3Path.curveToPoint(NSMakePoint(12.5, 9.5), controlPoint1: NSMakePoint(11.77, 8.77), controlPoint2: NSMakePoint(12.14, 9.14))
+        bezier3Path.curveToPoint(NSMakePoint(12.5, 5), controlPoint1: NSMakePoint(12.5, 8.23), controlPoint2: NSMakePoint(12.5, 5))
+        bezier3Path.curveToPoint(NSMakePoint(10, 2.5), controlPoint1: NSMakePoint(12.5, 3.62), controlPoint2: NSMakePoint(11.38, 2.5))
+        bezier3Path.lineToPoint(NSMakePoint(4, 2.5))
+        bezier3Path.curveToPoint(NSMakePoint(1.99, 3.52), controlPoint1: NSMakePoint(3.17, 2.5), controlPoint2: NSMakePoint(2.44, 2.9))
+        bezier3Path.curveToPoint(NSMakePoint(1.5, 5), controlPoint1: NSMakePoint(1.68, 3.93), controlPoint2: NSMakePoint(1.5, 4.45))
+        bezier3Path.lineToPoint(NSMakePoint(1.5, 10))
+        bezier3Path.curveToPoint(NSMakePoint(4, 12.5), controlPoint1: NSMakePoint(1.5, 11.38), controlPoint2: NSMakePoint(2.62, 12.5))
+        bezier3Path.lineToPoint(NSMakePoint(9.38, 12.5))
+        bezier3Path.closePath()
+        NSColor.blackColor().setFill()
+        bezier3Path.fill()
+    }
+
     //// Generated Images
 
     public class func imageOfStatusBarImage(iosDayLabel iosDayLabel: String = "99") -> NSImage {
@@ -248,6 +301,20 @@ public class AppReviewTimeMonitorStyleKit : NSObject {
         }
 
         return Cache.imageOfCombinedStatusBarError!
+    }
+
+    public class var imageOfOpenLink: NSImage {
+        if Cache.imageOfOpenLink != nil {
+            return Cache.imageOfOpenLink!
+        }
+
+        Cache.imageOfOpenLink = NSImage(size: NSMakeSize(16, 16), flipped: false) { (NSRect) -> Bool in 
+                AppReviewTimeMonitorStyleKit.drawOpenLink()
+
+            return true
+        }
+
+        return Cache.imageOfOpenLink!
     }
 
 }

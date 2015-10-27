@@ -14,6 +14,7 @@
         <customObject id="-3" userLabel="Application" customClass="NSObject"/>
         <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModule="AppReviewTimeMonitor" customModuleProvider="target">
             <connections>
+                <outlet property="gotoWebsiteItem" destination="Hsc-Gm-pMZ" id="YWL-nt-r0R"/>
                 <outlet property="menu" destination="cfE-bG-E3L" id="ahm-AC-K5N"/>
             </connections>
         </customObject>

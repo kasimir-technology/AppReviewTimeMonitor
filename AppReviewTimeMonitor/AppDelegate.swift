@@ -21,6 +21,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     @IBAction func quitAction(sender: AnyObject) {
         exit(0)
     }
+    
+    @IBOutlet weak var gotoWebsiteItem: NSMenuItem!
 
     @IBAction func gotoWebsiteAction(sender: AnyObject) {
         NSWorkspace.sharedWorkspace().openURL(NSURL(string: "http://appreviewtimes.com/")!)
@@ -34,6 +36,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         showErrorIcon()
         refreshTimes()
         statusItem.menu = menu
+        gotoWebsiteItem.image = AppReviewTimeMonitorStyleKit.imageOfOpenLink
 
         // start timer to update values every 30 min
         NSTimer.scheduledTimerWithTimeInterval(60*30, target:self, selector: Selector("refreshTimes"), userInfo: nil, repeats: true)
