@@ -211,8 +211,8 @@ public class AppReviewTimeMonitorStyleKit : NSObject {
         //// Group 2
         //// Bezier 2 Drawing
         let bezier2Path = NSBezierPath()
-        bezier2Path.moveToPoint(NSMakePoint(14.5, 14.5))
-        bezier2Path.lineToPoint(NSMakePoint(8.5, 8.5))
+        bezier2Path.moveToPoint(NSMakePoint(13.5, 14.5))
+        bezier2Path.lineToPoint(NSMakePoint(7.5, 8.5))
         NSColor.blackColor().setStroke()
         bezier2Path.lineWidth = 1
         bezier2Path.stroke()
@@ -220,9 +220,9 @@ public class AppReviewTimeMonitorStyleKit : NSObject {
 
         //// Bezier Drawing
         let bezierPath = NSBezierPath()
-        bezierPath.moveToPoint(NSMakePoint(10, 14.5))
-        bezierPath.lineToPoint(NSMakePoint(14.5, 14.5))
-        bezierPath.lineToPoint(NSMakePoint(14.5, 10))
+        bezierPath.moveToPoint(NSMakePoint(9, 14.5))
+        bezierPath.lineToPoint(NSMakePoint(13.5, 14.5))
+        bezierPath.lineToPoint(NSMakePoint(13.5, 10))
         NSColor.blackColor().setStroke()
         bezierPath.lineWidth = 1
         bezierPath.stroke()
@@ -234,24 +234,24 @@ public class AppReviewTimeMonitorStyleKit : NSObject {
 
         //// Bezier 3 Drawing
         let bezier3Path = NSBezierPath()
-        bezier3Path.moveToPoint(NSMakePoint(9.38, 12.5))
-        bezier3Path.curveToPoint(NSMakePoint(8.38, 11.5), controlPoint1: NSMakePoint(9.01, 12.13), controlPoint2: NSMakePoint(8.64, 11.76))
-        bezier3Path.lineToPoint(NSMakePoint(4, 11.5))
-        bezier3Path.curveToPoint(NSMakePoint(2.5, 10), controlPoint1: NSMakePoint(3.17, 11.5), controlPoint2: NSMakePoint(2.5, 10.83))
-        bezier3Path.lineToPoint(NSMakePoint(2.5, 5))
-        bezier3Path.curveToPoint(NSMakePoint(4, 3.5), controlPoint1: NSMakePoint(2.5, 4.17), controlPoint2: NSMakePoint(3.17, 3.5))
-        bezier3Path.lineToPoint(NSMakePoint(10, 3.5))
-        bezier3Path.curveToPoint(NSMakePoint(11.5, 5), controlPoint1: NSMakePoint(10.83, 3.5), controlPoint2: NSMakePoint(11.5, 4.17))
-        bezier3Path.curveToPoint(NSMakePoint(11.5, 8.5), controlPoint1: NSMakePoint(11.5, 5), controlPoint2: NSMakePoint(11.5, 7.03))
-        bezier3Path.curveToPoint(NSMakePoint(12.5, 9.5), controlPoint1: NSMakePoint(11.77, 8.77), controlPoint2: NSMakePoint(12.14, 9.14))
-        bezier3Path.curveToPoint(NSMakePoint(12.5, 5), controlPoint1: NSMakePoint(12.5, 8.23), controlPoint2: NSMakePoint(12.5, 5))
-        bezier3Path.curveToPoint(NSMakePoint(10, 2.5), controlPoint1: NSMakePoint(12.5, 3.62), controlPoint2: NSMakePoint(11.38, 2.5))
-        bezier3Path.lineToPoint(NSMakePoint(4, 2.5))
-        bezier3Path.curveToPoint(NSMakePoint(1.99, 3.52), controlPoint1: NSMakePoint(3.17, 2.5), controlPoint2: NSMakePoint(2.44, 2.9))
-        bezier3Path.curveToPoint(NSMakePoint(1.5, 5), controlPoint1: NSMakePoint(1.68, 3.93), controlPoint2: NSMakePoint(1.5, 4.45))
-        bezier3Path.lineToPoint(NSMakePoint(1.5, 10))
-        bezier3Path.curveToPoint(NSMakePoint(4, 12.5), controlPoint1: NSMakePoint(1.5, 11.38), controlPoint2: NSMakePoint(2.62, 12.5))
-        bezier3Path.lineToPoint(NSMakePoint(9.38, 12.5))
+        bezier3Path.moveToPoint(NSMakePoint(8.38, 12.5))
+        bezier3Path.curveToPoint(NSMakePoint(7.38, 11.5), controlPoint1: NSMakePoint(8.01, 12.13), controlPoint2: NSMakePoint(7.64, 11.76))
+        bezier3Path.lineToPoint(NSMakePoint(3, 11.5))
+        bezier3Path.curveToPoint(NSMakePoint(1.5, 10), controlPoint1: NSMakePoint(2.17, 11.5), controlPoint2: NSMakePoint(1.5, 10.83))
+        bezier3Path.lineToPoint(NSMakePoint(1.5, 5))
+        bezier3Path.curveToPoint(NSMakePoint(3, 3.5), controlPoint1: NSMakePoint(1.5, 4.17), controlPoint2: NSMakePoint(2.17, 3.5))
+        bezier3Path.lineToPoint(NSMakePoint(9, 3.5))
+        bezier3Path.curveToPoint(NSMakePoint(10.5, 5), controlPoint1: NSMakePoint(9.83, 3.5), controlPoint2: NSMakePoint(10.5, 4.17))
+        bezier3Path.curveToPoint(NSMakePoint(10.5, 8.5), controlPoint1: NSMakePoint(10.5, 5), controlPoint2: NSMakePoint(10.5, 7.03))
+        bezier3Path.curveToPoint(NSMakePoint(11.5, 9.5), controlPoint1: NSMakePoint(10.77, 8.77), controlPoint2: NSMakePoint(11.14, 9.14))
+        bezier3Path.curveToPoint(NSMakePoint(11.5, 5), controlPoint1: NSMakePoint(11.5, 8.23), controlPoint2: NSMakePoint(11.5, 5))
+        bezier3Path.curveToPoint(NSMakePoint(9, 2.5), controlPoint1: NSMakePoint(11.5, 3.62), controlPoint2: NSMakePoint(10.38, 2.5))
+        bezier3Path.lineToPoint(NSMakePoint(3, 2.5))
+        bezier3Path.curveToPoint(NSMakePoint(0.99, 3.52), controlPoint1: NSMakePoint(2.17, 2.5), controlPoint2: NSMakePoint(1.44, 2.9))
+        bezier3Path.curveToPoint(NSMakePoint(0.5, 5), controlPoint1: NSMakePoint(0.68, 3.93), controlPoint2: NSMakePoint(0.5, 4.45))
+        bezier3Path.lineToPoint(NSMakePoint(0.5, 10))
+        bezier3Path.curveToPoint(NSMakePoint(3, 12.5), controlPoint1: NSMakePoint(0.5, 11.38), controlPoint2: NSMakePoint(1.62, 12.5))
+        bezier3Path.lineToPoint(NSMakePoint(8.38, 12.5))
         bezier3Path.closePath()
         NSColor.blackColor().setFill()
         bezier3Path.fill()
@@ -308,7 +308,7 @@ public class AppReviewTimeMonitorStyleKit : NSObject {
             return Cache.imageOfOpenLink!
         }
 
-        Cache.imageOfOpenLink = NSImage(size: NSMakeSize(16, 16), flipped: false) { (NSRect) -> Bool in 
+        Cache.imageOfOpenLink = NSImage(size: NSMakeSize(14, 16), flipped: false) { (NSRect) -> Bool in 
                 AppReviewTimeMonitorStyleKit.drawOpenLink()
 
             return true
