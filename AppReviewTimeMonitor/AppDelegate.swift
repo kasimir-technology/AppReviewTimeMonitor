@@ -21,7 +21,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     @IBAction func quitAction(sender: AnyObject) {
         exit(0)
     }
-    
+
+    @IBOutlet weak var lastrefreshedItem: NSMenuItem!
     @IBOutlet weak var gotoWebsiteItem: NSMenuItem!
 
     @IBAction func gotoWebsiteAction(sender: AnyObject) {
@@ -72,6 +73,12 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         let icon = AppReviewTimeMonitorStyleKit.imageOfCombinedStatusBarImage(iosDayLabel: iosLabel, osxDayLabel: osxLabel)
         icon.template = true
         statusItem.image = icon
+
+        let formatter = NSDateFormatter()
+        formatter.dateStyle = .MediumStyle
+        formatter.timeStyle = .MediumStyle
+
+        lastrefreshedItem.title = "\(formatter.stringFromDate(NSDate()))"
     }
 
     func showErrorIcon() {

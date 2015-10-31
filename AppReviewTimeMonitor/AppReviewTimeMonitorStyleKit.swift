@@ -26,7 +26,7 @@ public class AppReviewTimeMonitorStyleKit : NSObject {
 
     public class func drawStatusBarImage(iosDayLabel iosDayLabel: String = "99") {
         //// General Declarations
-        let context = unsafeBitCast(NSGraphicsContext.currentContext()!.graphicsPort, CGContext.self)
+        _ = unsafeBitCast(NSGraphicsContext.currentContext()!.graphicsPort, CGContext.self)
 
         //// Rectangle Drawing
         let rectanglePath = NSBezierPath(roundedRect: NSMakeRect(1, 5, 20, 13), xRadius: 3, yRadius: 3)
@@ -87,8 +87,7 @@ public class AppReviewTimeMonitorStyleKit : NSObject {
 
     public class func drawCombinedStatusBarImage(iosDayLabel iosDayLabel: String = "99", osxDayLabel: String = "99") {
         //// General Declarations
-        let context = unsafeBitCast(NSGraphicsContext.currentContext()!.graphicsPort, CGContext.self)
-
+ 
         //// Rectangle Drawing
         let rectanglePath = NSBezierPath(roundedRect: NSMakeRect(1, 4.5, 39.5, 13), xRadius: 3, yRadius: 3)
         NSColor.blackColor().setStroke()

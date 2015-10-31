@@ -15,6 +15,7 @@
         <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModule="AppReviewTimeMonitor" customModuleProvider="target">
             <connections>
                 <outlet property="gotoWebsiteItem" destination="Hsc-Gm-pMZ" id="YWL-nt-r0R"/>
+                <outlet property="lastrefreshedItem" destination="zMg-1C-D1l" id="iyO-Bz-YeW"/>
                 <outlet property="menu" destination="cfE-bG-E3L" id="ahm-AC-K5N"/>
             </connections>
         </customObject>
@@ -22,6 +23,9 @@
         <menu id="cfE-bG-E3L">
             <items>
                 <menuItem title="left: iOS, right: OSX" id="VPa-HX-17v">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                </menuItem>
+                <menuItem title="Last refreshed" id="zMg-1C-D1l">
                     <modifierMask key="keyEquivalentModifierMask"/>
                 </menuItem>
                 <menuItem title="Refresh now" image="NSRefreshTemplate" id="hQK-OB-afS">
