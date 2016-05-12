@@ -40,7 +40,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         gotoWebsiteItem.image = AppReviewTimeMonitorStyleKit.imageOfOpenLink
 
         // start timer to update values every 30 min
-        NSTimer.scheduledTimerWithTimeInterval(60*30, target:self, selector: Selector("refreshTimes"), userInfo: nil, repeats: true)
+        NSTimer.scheduledTimerWithTimeInterval(60*30, target:self, selector: #selector(AppDelegate.refreshTimes), userInfo: nil, repeats: true)
     }
 
     func refreshTimes() {
@@ -48,7 +48,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
             if response.result.isSuccess {
                 let result=String(NSString(data: response.result.value!, encoding: NSUTF8StringEncoding))
-                let pattern = "<p class=\"average\">(.*?) days<\\/p>"
+                let pattern = "data-target=\".review....\"><strong>... App Store</strong> (.*?) day"
                 let days = self.extractData(result,regexp: pattern)
 
                 let iosLabel:String
@@ -94,6 +94,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             let regexp = try RegExp(pattern:regexp, options: NSRegularExpressionOptions.AnchorsMatchLines)
             let matches = regexp!.allMatches(str)
             for match in matches {
+                print(match)
                 if let value = Int(match) {
                     ret.append(value)
                 }
